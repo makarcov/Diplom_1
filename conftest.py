@@ -8,34 +8,35 @@ from praktikum.database import Database
 from praktikum.ingredient import Ingredient
 
 
+# фикстура булочки
 @pytest.fixture(scope="function")
 def bun():
     bun = Bun('bun', 50)
 
     return bun
 
-
+# фикстура ингредиента (соуса)
 @pytest.fixture(scope="function")
 def ingredient():
     ingredient = Ingredient('sauce', 'spicy', 20)
 
     return ingredient
 
-
+# фикстура бургера
 @pytest.fixture(scope="function")
 def burger():
     burger = Burger()
 
     return burger
 
-
+# фикстура датабазы
 @pytest.fixture(scope="function")
 def database():
     database = Database()
 
     return database
 
-
+# фикстура мока булочки
 @pytest.fixture(scope="function")
 def mock_bun():
     bun = Mock()
@@ -46,7 +47,7 @@ def mock_bun():
 
     return bun
 
-
+# фикстура мока ингредиента (соуса)
 @pytest.fixture(scope="function")
 def mock_ingredient_sauce():
     ingredient = Mock()
@@ -59,7 +60,7 @@ def mock_ingredient_sauce():
 
     return ingredient
 
-
+# фикстура мока ингредиента (начинки)
 @pytest.fixture(scope="function")
 def mock_ingredient_filling():
     ingredient = Mock()
