@@ -15,12 +15,14 @@ def bun():
 
     return bun
 
+
 # фикстура ингредиента (соуса)
 @pytest.fixture(scope="function")
 def ingredient():
     ingredient = Ingredient('sauce', 'spicy', 20)
 
     return ingredient
+
 
 # фикстура бургера
 @pytest.fixture(scope="function")
@@ -29,12 +31,14 @@ def burger():
 
     return burger
 
+
 # фикстура датабазы
 @pytest.fixture(scope="function")
 def database():
     database = Database()
 
     return database
+
 
 # фикстура мока булочки
 @pytest.fixture(scope="function")
@@ -46,6 +50,7 @@ def mock_bun():
     bun.get_price.return_value = 100
 
     return bun
+
 
 # фикстура мока ингредиента (соуса)
 @pytest.fixture(scope="function")
@@ -59,6 +64,7 @@ def mock_ingredient_sauce():
     ingredient.get_price.return_value = 10
 
     return ingredient
+
 
 # фикстура мока ингредиента (начинки)
 @pytest.fixture(scope="function")
